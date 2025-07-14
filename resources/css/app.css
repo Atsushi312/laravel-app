@@ -1,0 +1,221 @@
+body {
+    font-family: sans-serif;
+    background: #f8fdfd;
+    color: #333;
+}
+
+.container {
+    width: 800px;
+    margin: 50px auto;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* ---------- 検索フォーム ---------- */
+.block__form-wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.block__form input,
+.block__form select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+.block__form button {
+    padding: 8px 16px;
+    border: 1px solid #333;
+    background: #fff;
+    cursor: pointer;
+}
+
+/* ---------- テーブル共通 ---------- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+th, td {
+    padding: 12px 15px;
+    border: 1px solid #bbb;
+    font-size: 14px;
+    text-align: left;
+}
+th {
+    background: #f8f8f8;
+    font-weight: bold;
+}
+tr:nth-child(odd) td {
+    background: #f0f0f0;
+}
+
+/* 特殊テーブル: 一覧テーブル中央寄せ */
+.block__table th, 
+.block__table td {
+    text-align: center;
+}
+.block__table th:first-child,
+.block__table td:first-child {
+    border-left: 1px solid #bbb;
+}
+.block__table th:last-child,
+.block__table td:last-child {
+    border-right: 1px solid #bbb;
+}
+.block__table th:not(:first-child):not(:last-child),
+.block__table td:not(:first-child):not(:last-child) {
+    border-right: none;
+}
+
+/* ---------- ページネーション ---------- */
+.block__pagination {
+    text-align: center;
+    margin: 20px 0;
+}
+.block__pagination a,
+.block__pagination span {
+    display: inline-block;
+    border: 1px solid #999;
+    border-radius: 4px;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    font-size: 13px;
+    color: #333;
+    text-decoration: none;
+    margin: 0 2px;
+}
+.block__pagination a:hover {
+    background: #ddd;
+}
+.block__pagination .active span {
+    background: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}
+
+/* ---------- フォーム行 ---------- */
+.form-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.form-row label {
+    width: 140px;
+    font-weight: bold;
+    font-size: 16px;
+}
+.form-row input[type="text"],
+.form-row input[type="number"],
+.form-row select,
+.form-row textarea {
+    width: 300px;
+    padding: 6px 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.form-row textarea {
+    height: 60px;
+    resize: vertical;
+}
+
+/* ---------- 必須マーク ---------- */
+.required {
+    color: red;
+    font-size: 16px;
+}
+
+/* ---------- ファイル選択ボタン ---------- */
+input[type="file"] {
+    color: transparent; /* テキストを透明にする */
+    width: 150px;
+    height: 36px;
+    background: #ddd;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="file"]::file-selector-button,
+input[type="file"]::-webkit-file-upload-button {
+    background: #ddd;
+    color: #333;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+}
+input[type="file"]::file-selector-button:hover,
+input[type="file"]::-webkit-file-upload-button:hover {
+    background: #ccc;
+}
+
+input[type="submit"] {
+    background: orange;
+    color: #fff;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background: darkorange;
+}
+
+/* ---------- 共通ボタン ---------- */
+.btn-orange, .btn-blue, .btn-red {
+    display: inline-block;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.btn-orange {
+    background: orange;
+    color: #fff;
+}
+.btn-orange:hover {
+    background: darkorange;
+}
+.btn-blue {
+    background: #00cfff;
+    color: #000;
+}
+.btn-blue:hover {
+    background: #00b0dc;
+}
+.btn-red {
+    background: red;
+    color: #fff;
+    padding: 4px 12px;
+    font-size: 13px;
+}
+.btn-red:hover {
+    background: darkred;
+}
+
+/* ---------- ボタン中央 ---------- */
+.form-buttons,
+.detail-buttons {
+    text-align: center;
+    margin-top: 25px;
+}
+.form-buttons .btn-orange,
+.form-buttons .btn-blue,
+.detail-buttons .btn-orange,
+.detail-buttons .btn-blue {
+    margin: 0 8px;
+}
